@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Redirecting...</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .message {
+      text-align: center;
+      background: #fff;
+      padding: 30px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+  </style>
+  <script>
+    // Your tokens and target URLs
+    const redirectMap = {
+      "optest": "https://google.Com",
+      "output": "https://www.aurocolddomain.com/4DTQ4Q5/SRP6WLS/?__efq=x_nSq6B48PErTuld9tOT7clf5-IYFhyo",
+      "qualidad2025": "https://www.aurocolddomain.com/4DTQ4Q5/SRP6WLS/?sub1=2&sub2=wow&sub3=27",
+      "spectrum27": "https://www.aurocolddomain.com/4DTQ4Q5/X3W62ZG/?__efq=a7QTpCCnYDC9OLV1fpWErZOtb6xnXFj-",
+      "proinsc27": "https://soupcyan.com/AYb4MjuAe4Z4fjEalqEqr5OPLpTunrDa7Jib2ny1X2Jy8u7q8RtUPsl6dTBKvjexKK6MDH27OJUM2DB3BynQyw~~/2/av/27",
+      "proiwow27": "https://soupcyan.com/AYb4MjuAe4Z4fjEalqEqr5OPLpTunrDa7Jib2ny1X2Jy8u7q8RtUPsl6dTBKvjexKK6MDH27OJUM2DB3BynQyw~~/2/wow/27",
+      "dpoicla27": "https://soupcyan.com/AYb4MjuAe4Z4fjEalqEqr5OPLpTunrDa7Jib2ny1X2Jy8u7q8RtUPsl6dTBKvjexKK6MDH27OJUM2DB3BynQyw~~/2/win/28",
+      "samvi": "https://www.aurocolddomain.com/4DTQ4Q5/23Q92KSM/?sub1=2&sub2=av&sub3=12",
+      // Add more token: "targetURL" pairs here
+    };
+
+    const token = window.location.search.substring(1); // Gets token from ?token
+    const redirectTo = redirectMap[token];
+
+    if (redirectTo) {
+      window.location.href = redirectTo;
+    } else {
+      window.addEventListener('DOMContentLoaded', () => {
+        document.getElementById('message').innerHTML = `
+          <h2>⚠️ Invalid or expired link</h2>
+          <p>Please check your URL or contact the sender.</p>
+        `;
+      });
+    }
+  </script>
+</head>
+<body>
+  <div class="message" id="message">
+    <p>Redirecting...</p>
+  </div>
+</body>
+</html>
